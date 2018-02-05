@@ -56,6 +56,15 @@ public class Aquecimento {
 		return true;
 	}
 	
+public static boolean isOrdened2(Integer[] v) {
+	
+		
+		for(int i = 0; i < v.length - 1; i++) {
+			if(v[i] > v[i+1])
+				return false;
+		}
+		return true;
+	}
 	public static int maxElementOfVector(int[] vector) {
 		
 		int max = vector[0];
@@ -95,8 +104,9 @@ public class Aquecimento {
 		for(int i = 1; i < v.length; i++) {	
 			int aux = v[i];
 			int j = i - 1;
-			for(; j >= 0 && v[j] > v[j+1]; j--)
-				v[i] = v[j];
+			for(; j >= 0 && v[j] > aux; j--)
+				 v[j + 1] =  v[j];
+				
 			v[j+1] = aux; 
 		}
 	}

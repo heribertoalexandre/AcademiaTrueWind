@@ -53,8 +53,8 @@ class TestSorted {
 	@Test
 	
 	void TestInsertionSort() {
-		Integer[] test =  {4,1,2,8,7};
-		Integer[] vetorOrdenado = {1,2,4,7,8};
+		Integer[] test =  {8,-3,6, 1,2,8,7};
+		Integer[] vetorOrdenado = {-3,1,2, 6, 7, 8, 8};
 		
 		Aquecimento.InsertionSort(test);
 	

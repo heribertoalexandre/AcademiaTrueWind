@@ -23,7 +23,7 @@ public class ExperienciaTempo {
 
 		//Insertion
 		
-		Integer[] array2 = Aquecimento.random(10000, 100);
+		Integer[] array2 = Aquecimento.random(100000, 1000);
 		
 		long timeInsertionSortFirst = System.currentTimeMillis();
 	
@@ -35,9 +35,9 @@ public class ExperienciaTempo {
 		System.out.println("Ordenação Insertion 1" + timeInsertionSortFirst);
 		
 		long timeInsertionSortSecond = System.currentTimeMillis();
-		SelectionSort.selectionSort(array2, comp);
+		InsertionSortPlusCompare.InsertionSort(array2, comp);
 		timeInsertionSortSecond = System.currentTimeMillis() - timeInsertionSortSecond ;
-		
+		System.out.println(Aquecimento.isOrdened2(array2));
 		System.out.println("Ordenação Insertion já ordenado : " + timeInsertionSortSecond);
 		
 		

@@ -9,8 +9,8 @@ public class InsertionSortPlusCompare{
 		for(int i = 1; i < v.length; i++) {	
 			T aux = v[i];
 			int j = i - 1;
-			for(; j >= 0 && comp.compare(v[j],v[j+1]) > 0; j--)
-				v[i] = v[j];
+			for(; j >= 0 && comp.compare(v[j],aux) > 0; j--)
+				v[j+1] = v[j];
 			v[j+1] = aux; 
 		}
 	}
